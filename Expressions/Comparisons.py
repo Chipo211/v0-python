@@ -1,0 +1,20 @@
+print(True == False)
+print(False == False)
+print(False != True)
+print((not True) == False)
+
+print((2 + 3) == 5)
+print(4 < 0)
+print(10 >= 10)
+print(10.3 >= 10)
+
+print((100 / 2) == 50)
+print((100 % 2) == 0)
+print((11 % 2) == 0)
+print(7.0 == 7)
+
+print((13 % 5) > 0)
+print("potato" == "potato")
+print("Tomato" == "tomato")
+print("42" == 42)
+print(5 > 3 and 1 == 0)

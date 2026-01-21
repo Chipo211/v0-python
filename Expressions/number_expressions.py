@@ -1,0 +1,20 @@
+print(2 + 3)
+print(10 - 15)
+print(4 + 1 - 5)
+print(4 * 3)
+
+print(7 / 2)
+print(4 + 2 * 3)
+print((4 + 2) * 3)
+print(5 % 2)
+
+print(6 % 2)
+print(7 % 2)
+print(8 % 2)
+print(19 % 8)
+
+print(24 % 8)
+print(7 % 4)
+print(4 % 7)
+print(5 + (10 % 5))
+print((5 + 10) % 5)

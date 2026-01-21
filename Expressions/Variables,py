@@ -1,0 +1,89 @@
+#What is a variable? 
+ # a place where we can store data 
+
+x = 10 
+
+y = 20
+
+#you can give it any name
+my_name = "Robert"
+
+print(x + y)
+
+#Type of data
+
+#1. Numbers - int(integer) , float(decimal)
+
+#int 
+print(20)
+#float
+print(100.50)
+
+#2. String ' ' , ""
+str = "hello"  # empty string  str = ""
+print(str)
+
+#Boolean Type its for True and False
+#Print true - dont neeed to put it in a string
+
+# % modula operator - returns a remainder 
+
+#Boolean/ Logical Operator; or, and , not 
+
+#Variable exercise - Zero.py
+
+location = "Brooklyn, " + "NY"
+print(location)
+
+quantity = 4 * 5 + 1
+print(quantity)
+
+word = "bye"
+print(word + " felicia")
+print(word)
+
+num = 10
+num = num * 2
+print(num)
+
+
+apple = None
+print(apple)
+
+apple = 5
+print(apple)
+
+apple + 1
+print(apple)
+
+apple += 1
+print(apple)
+
+banana = apple
+print(banana)
+
+banana = banana / 2
+print(banana)
+
+print(apple)
+
+qty = 15 % 4
+print(qty)
+
+num = 38 + 3
+num += 1
+print(str(num) + " is a great number")
+
+is_num_even = (num % 2) == 0
+print(str(num) + " is even? " + str(is_num_even))
+
+is_qty_even = (qty % 2) == 0
+print(str(qty) + " is even? " + str(is_qty_even))
+
+
+movie = "Interstellar"
+views = 7
+
+print(f"I watched {movie} about {views} number of times")
+
+

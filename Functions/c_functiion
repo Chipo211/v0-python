@@ -1,0 +1,149 @@
+#divisible_by that returns true if num1 is divisble by num2 otherwise false.
+
+def divisible(num1,num2):
+    return num1 % num2 == 0 
+
+print(divisible(12, 3))    # True
+print(divisible(12, 5))    # False
+print(divisible(60, 4))    # True
+print(divisible(60, 11))   # False
+print(divisible(21, 7))    # True
+print(divisible(21, 6))    # False
+
+#alternative 
+def divisble(num1,num2):
+    if num1 % num2 == 0:
+        return True
+    else:
+        return False
+
+#Case Changer, if make_upper is true , return the string in uppercase if false return in lowercase.
+
+def case_change(s, upper):
+    if upper:
+        return s.upper()
+    else:
+        return s.lower()
+    
+print(case_change("Super", True))      # SUPER
+print(case_change("Super", False))     # super
+print(case_change("tAmBourine", True)) # TAMBOURINE
+print(case_change("tAmBourine", False))# tambourine
+
+#in_range , return true if n is between min_val and max_val
+
+def in_range(min, max, n):
+    if n >= min and n<= max:
+        return True
+    else:
+        return False
+    
+print(in_range(5, 13, 8))     # True
+print(in_range(5, 13, 29))    # False
+print(in_range(100, 125, 100))# True
+print(in_range(100, 125, 99)) # False
+print(in_range(40, 45, 44))   # True
+print(in_range(40, 45, 45))   # True
+print(in_range(40, 45, 46))   # False
+#alternative
+def in_range(min,max,n):
+    return n >= min and n <= max
+
+
+# average_of_4
+def average_of_four(a, b, c, d):
+    return (a + b + c + d)/4
+
+print(average_of_four(10, 4, 12, 3))     # 7.25
+print(average_of_four(-20, 50, 4, 21))   # 13.75
+print(average_of_four(5, 5, 3, 7))       # 5
+
+
+#number_change if the number is even return half, if the number is odd return double.
+
+def number_change(num):
+    if num % 2 == 0:
+        return num/2
+    else:
+        return num * 2
+    
+print(number_change(6))   # 3
+print(number_change(7))   # 14
+print(number_change(16))  # 8
+print(number_change(21))  # 42
+
+
+#larger return the larger of the 2
+
+def larger(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+    
+print(larger(256, 400))   # 400
+print(larger(31, 4))      # 31
+print(larger(-6, 7))      # 7
+print(larger(11.3, 11.2)) # 11.3
+print(larger(-10, -3))    # -3
+
+#contains returns true if str2 is found inside str1
+
+def contains(text, word):
+    return word.lower() in text.lower()
+
+print(contains("caterpillar", "pill"))     # True
+print(contains("lion's share", "on"))      # True
+print(contains("SORRY", "or"))             # True
+print(contains("tangent", "gem"))          # False
+print(contains("clock", "ok"))             # False
+
+#Reverse_string
+def reverse_string(s):
+    return s[::-1]
+    
+print(reverse_string("hello"))   # olleh
+print(reverse_string("Python"))  # nohtyP
+
+#count_vowels
+
+def count_vowels(s):
+    s = s.lower()   #make lowercase
+    count = 0  #this initializes a counter everytime we find a vowel we add 1
+    for char in s:  # go through each character
+        if char in "aeiou":  #check if its a vowel
+            count += 1  #if character is a vowel ad 1 to the counter
+    return count
+        
+        
+print(count_vowels("hello"))        # 2
+print(count_vowels("Programming"))  # 3
+
+
+#Palindrome checks if its sthe same forwarc and backward
+
+def is_palindrome(s):
+    rev_word = s[::-1]
+    return s == rev_word
+
+print(is_palindrome("level"))          # True
+print(is_palindrome("Race car"))       # True
+print(is_palindrome("python"))         # False
+
+#sum_upto, returns the sum of all nummbers from 1 up to n
+
+def sum_upto(n):
+    total = 0
+    for i in range(1, n+1): #1 to n inclusive
+        total += i
+    return total
+    
+print(sum_upto(5))   # 15
+print(sum_upto(10))  # 55
+
+
+
+
+
+
+

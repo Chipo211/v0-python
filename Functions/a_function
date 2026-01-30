@@ -1,0 +1,69 @@
+def add(a,b):
+    print(a+b)
+    
+print("****** program start")
+
+add(5, 10)
+add(15, 10)
+add(25, 10)
+add(35, 10)
+
+print("this is a string".upper())
+
+#Snippet_01
+def greet():
+    print("hey")
+    print("programmers")
+
+def whistle():
+    print("doot")
+
+print("first")
+print("second")
+greet()
+print("third")
+print("fourth")
+whistle()
+
+
+#Snippet 02
+def how_many():  #Define a function first
+    return 42  #when ths fucntion is caled it returns 42 
+
+print(how_many) #You are not caling a function since there isnt () ,python prints the function itselt not the result 
+print(how_many())  #Now you call the function using(), the function runs and returns 42
+
+the_answer = how_many()  #how many() runs and returns 42, that value is stored in the_answer.
+print(the_answer)
+
+def how_much():  #The function has no return statement
+    5   # does nothing
+
+print(how_much())  #The function runs and it returns none.  Function refers to the function itself, function() calls it, return sends a value back.
+
+
+#Snippet 3
+def average(num1, num2):
+    print("calculating...") #Print the message calclulating everytie i run the code.
+    return (num1 + num2) / 2
+
+print(average(5, 10))
+print(average(20, 26))
+print(average(50, 100) + 2)
+
+a = 21 + 3
+b = 20
+n = average(a, b)
+print(average(n, 18)) #Average(22,18), 
+
+#Snippet 4
+def exclaim(s):  # S is a string parameter
+    capitalized = s.upper() # converts the string to uppercase
+    return capitalized + "!!"  #!! are added to the end of the function.
+
+result = exclaim("potato") # the value is stored in result.
+print(result)
+print(len(result))
+print(result[0])  #print first character
+print(result[-1])  #Print last character
+

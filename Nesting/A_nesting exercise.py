@@ -16,25 +16,28 @@ for n in range(2): #means start at 0 and top before 2 ; n = 0, 1
 #snippet 3
 friends = ["philip", "abby", "phelipe", "simcha"]
 
-for i in range(len(friends)):
-    for j in range(len(friends)):
+for i in range(len(friends)):# len(friends) = 4,  range(4)
+    for j in range(len(friends)): #range(4); 0,1,2,3
         print(friends[i], friends[j])
 
 
 #snippet 4
 locations = ["flatbush", "williamsburg", "bushwick", "greenpoint"]
 
-for i in range(len(locations)):
-    for j in range(i + 1, len(locations)):
+for i in range(len(locations)): #ramge(4)
+    for j in range(i + 1, len(locations)): # range (i + 1, 4), so intsead of starting from 0 its going to start from i + 1, it skips prev combinations & avoids duplicates & skips itself 
         print(locations[i], locations[j])
 
 
 #snippet 5
-locations = ["flatbush", "williamsburg", "bushwick", "greenpoint"]
+colors = ["red", "purple", "orange"]
 
-for i in range(len(locations)):
-    for j in range(i + 1, len(locations)):
-        print(locations[i], locations[j])
+for color_str in colors: # take all the words and store then in color_str
+    print(color_str)
+    for char in color_str: # when you loop over a string in python, it automaticaly loops over each character.
+        print(char)# so red , becomes r e d
+
+
 
 
 #pair_priint
@@ -44,8 +47,7 @@ for i in range(len(locations)):
 # Example:
 def pair_print(arr):
     # Loop through each element except the last
-    for i in range(len(arr)):
-        # Loop through the elements after the current one
+    for i in range(len(arr)): # moves through every element.
         for j in range(i + 1, len(arr)):
             print(f"{arr[i]} - {arr[j]}")
 
@@ -59,6 +61,7 @@ pair_print(["artichoke", "broccoli", "carrot", "daikon"])
 # broccoli - daikon
 # carrot - daikon
 
+#EXAMPLE 2
 #print_combinations
 # Write a function `print_combinations(arr1, arr2)` that accepts two lists.
 # The function should print all combinations taking one element from the first list
@@ -67,9 +70,9 @@ pair_print(["artichoke", "broccoli", "carrot", "daikon"])
 # Example:
 
 def print_combinations(arr1, arr2):
-    for item1 in arr1:
+    for item1 in arr1: # go throught the 1st list and take 1 element at a time and stor it in item1
         for item2 in arr2:
-            print(f"{item1} {item2}")
+            print(f"{item1} {item2}") # what happens now is that for each item in list 1, pair it with every item in list 2. f means formatted string,
 
 colors = ["gray", "cream", "cyan"]
 clothes = ["shirt", "flannel"]
@@ -82,6 +85,7 @@ print_combinations(colors, clothes)
 # cyan shirt
 # cyan flannel
 
+#EXAMPLE 3
 #Two_sum
 # Write a function `two_sum(numbers, target)` that accepts a list of numbers and a target number.
 # The function should return True if there exists a pair of distinct elements in the list that sum to the target.
@@ -90,10 +94,10 @@ print_combinations(colors, clothes)
 # Example:
 
 def two_sum(numbers, target):
-    seen = set()  # To store numbers we have seen
-    for num in numbers:
+    seen = set()  # set(),To store numbers we have seen, only keeps unique elements.
+    for num in numbers:# go through every numberr in the list, 1 by 1
         if target - num in seen:
-            return True
+            return True #target-num is the number we need to reach the target sum with the current  number.
         seen.add(num)
     return False
 
@@ -102,4 +106,10 @@ two_sum([2, 3, 5, 9], 4) #-> False
 two_sum([6, 3, 4], 10) #-> True
 two_sum([6, 5, 1], 10) #-> False
 
+def two_sum(numbers, target):
+    for i in range(len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if numbers[i] + numbers[j] == target:
+                return True
+    return False
 

@@ -1,15 +1,16 @@
 #snippet.1
 # Predict what this will print:
-for i in range(1, 5):
+for i in range(1, 5): 
     for j in range(1, 4):
         print(i, j)
-
+#So for every single i, j goes from 1 to 3
 #snippet 2
-for n in range(2):
-    print("n=" + str(n))
-    for m in range(5):
-        print("   m=" + str(m))
-    print("n=" + str(n))
+
+for n in range(2): #means start at 0 and top before 2 ; n = 0, 1
+    print("n=" + str(n)) # n is 0, str(n) converts number into a string ; n=0
+    for m in range(5):#inner loop: 0-4
+        print("   m=" + str(m)) # spaces before m are just indentation to make it look neat, ;m=0...
+    print("n=" + str(n)) # after the inner loop ends , n is still 0 it hasnt changed.  so it prints again n=0 
 
 
 #snippet 3

@@ -4,10 +4,10 @@
 
 # Example:
 def make_acronym(sentence):
-    list = str.split("")
-    acronym = ""
-    for word in list:
-        acronym += word[0]
+    list = str.split("") #split the  sentence into words
+    acronym = "" # empty string to store acronym
+    for word in list: #loop through each word
+        acronym += word[0] #Add the first letter- uppercase 
     print(acronym.upper())
 
 make_acronym("New York") #-> 'NY'
@@ -23,9 +23,9 @@ make_acronym("don't over think stuff") #-> 'DOTS'
 
 # Example:
 def reverse_array(arr):
-    new_list = []
-    for i in range(len(arr) - 1, -1, -1):
-        new_list.append(arr[i])
+    new_list = [] #create an empty list
+    for i in range(len(arr) - 1, -1, -1): # loop through each element
+        new_list.append(arr[i]) #insert each  element at the start 
     print (new_list)
     
 reverse_array(["zero", "one", "two", "three"]) #-> ['three', 'two', 'one', 'zero']
@@ -42,7 +42,7 @@ reverse_array([7, 1, 8]) #-> [8, 1, 7]
 def your_average_function(numbers):
     if len(numbers) == 0:
         return None
-    total = 0
+    total = 0 #variable to store the sum 
     for num in numbers:
         total += num
 
@@ -77,11 +77,11 @@ choose_divisibles([4, 25, 1000], 10) #-> [1000]
 
 # Example:
 def maximum(numbers):
-    if len(numbers) == 0:
+    if len(numbers) == 0: #check if the list is empty
         return None
-    max_num = numbers[0]  # start with the first number
+    max_num = numbers[0]  # start with the first number, assume the first number is the largest
     for num in numbers:
-        if num > max_num:
+        if num > max_num:#compare current number with max
             max_num = num  # update if we find a bigger number
     return max_num
 
